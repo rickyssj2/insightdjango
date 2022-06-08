@@ -1,0 +1,59 @@
+{% extends 'blog/base.html' %} {% load static %} {% block customCSS %}
+<link rel="stylesheet" href="{% static 'blog/css/style_blog.css' %}" />
+{% endblock %} {% block content %}
+
+<div class="hero">
+    <div class="container">
+        <div class="img-box">
+            <img
+                src="{% static 'blog/images/blog-2.png' %}"
+                alt="Title background image"
+                class="hero-img"
+            />
+        </div>
+        <div class="title">
+            <p>{{ post.title }}</p>
+        </div>
+        <div class="content">
+            <div class="wrap">{{ post.body|safe }}</div>
+        </div>
+    </div>
+</div>
+
+<hr />
+
+<h2 class="subtitle">Comments</h2>
+
+{% for comment in post.comments.all %}
+<article class="media">
+    <div class="media-content">
+        <div class="content">
+            <p>
+                <strong>{{ comment.name }}</strong>
+                <small>{{ comment.date_added }}</small>
+                <br />
+                {{ comment.body }}
+            </p>
+        </div>
+    </div>
+</article>
+{% empty %}
+<div class="notification">
+    <p>No comments yet!</p>
+</div>
+{% endfor %}
+
+<hr />
+
+<h2 class="subtitle">Add comment</h2>
+
+<form method="post" action=".">
+    {% csrf_token %} {{ form.as_p }}
+
+    <div class="field">
+        <div class="control">
+            <button class="button is-success">Submit</button>
+        </div>
+    </div>
+</form>
+{% endblock %}

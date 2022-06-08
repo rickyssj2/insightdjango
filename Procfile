@@ -1,0 +1,1 @@
+web: gunicorn CODEWITHSTEIN-MAIN.wsgi --log-file -

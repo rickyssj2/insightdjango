@@ -1,0 +1,112 @@
+{% extends 'blog/base.html' %} {% load static %} {% block customCSS %}
+<link rel="stylesheet" href="{% static 'blog/css/style.css' %}" />
+{% endblock%} {% block content %}
+<main>
+    <div class="main">
+        <div class="container">
+            <!---- BLOG SECTION -->
+            <div class="blog">
+                <h2 class="h2">Latest Blog Posts</h2>
+                {% for post in posts %}
+                <div class="blog-card-group">
+                    <div class="blog-card y-comb-card card-1">
+                        <div class="blog-card-banner">
+                            <img
+                                src="https://telegra.ph/file/3f025e238889e7c1393ce.png"
+                                alt="Building microservices with Dropwizard, MongoDB & Docker"
+                                width="250"
+                                class="blog-banner-img"
+                            />
+                        </div>
+
+                        <div class="blog-content-wrapper">
+                            <button class="blog-topic text-tiny">
+                                Interview
+                            </button>
+                            <p class="blog-text">
+                                Posted at {{ post.date_added }}
+                            </p>
+
+                            <h3>
+                                <a href="./blog/blog1.html" class="h3">
+                                    {{ post.title }}
+                                </a>
+                            </h3>
+
+                            <p class="blog-text">{{ post.intro }}</p>
+                            <a
+                                class="readmore"
+                                href="{% url 'post_detail' post.slug %}"
+                                >Read more</a
+                            >
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+
+            <!---- ASIDE -->
+            <div class="aside">
+                <div class="topics">
+                    <h2 class="h2">Topics</h2>
+
+                    <a href="#" class="topic-btn ew-topic">
+                        <div class="icon-box">
+                            <ion-icon name="accessibility-outline"></ion-icon>
+                        </div>
+
+                        <p>Interviews</p>
+                    </a>
+                </div>
+
+                <!-- <div class="tags">
+                        <h2 class="h2">Tags</h2>
+
+                        <div class="wrapper">
+                            <button class="hashtag">#mongodb</button>
+                            <button class="hashtag">#nodejs</button>
+                            <button class="hashtag">#a11y</button>
+                            <button class="hashtag">#mobility</button>
+                            <button class="hashtag">#inclusion</button>
+                            <button class="hashtag">#webperf</button>
+                            <button class="hashtag">#optimize</button>
+                            <button class="hashtag">#performance</button>
+                        </div>
+                    </div> -->
+
+                <div class="contact">
+                    <h2 class="h2">Let's Connect</h2>
+
+                    <div class="wrapper">
+                        <p>
+                            Do you want to learn more about the institue? Follow
+                            us!
+                        </p>
+
+                        <ul class="social-link">
+                            <li>
+                                <a
+                                    href="https://www.instagram.com/insight.iitb/"
+                                    class="icon-box twitter"
+                                >
+                                    <ion-icon name="logo-instagram"></ion-icon>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a
+                                    href="https://www.facebook.com/insight.iitbombay"
+                                    class="icon-box facebook"
+                                >
+                                    <ion-icon name="logo-facebook"></ion-icon>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+{% endblock %}
