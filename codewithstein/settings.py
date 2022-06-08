@@ -24,9 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'v1$#u%h+xamjax#0chkpgxqw78coa5#2)0oyd2un3-s4fq4v%+'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['121.0.0.1','insight-iitb.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1','insight-iitb.herokuapp.com']
 
 
 # Application definition
