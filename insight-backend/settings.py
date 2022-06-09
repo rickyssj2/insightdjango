@@ -53,7 +53,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'codewithstein.urls'
+ROOT_URLCONF = 'insight-backend.urls'
 
 TEMPLATES = [
     {
@@ -71,7 +71,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'codewithstein.wsgi.application'
+WSGI_APPLICATION = 'insight-backend.wsgi.application'
 
 
 # Database

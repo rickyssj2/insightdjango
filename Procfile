@@ -1,1 +1,1 @@
-web: gunicorn CODEWITHSTEIN-MAIN.wsgi --log-file -
+web: gunicorn insight-backend.wsgi --log-file -
