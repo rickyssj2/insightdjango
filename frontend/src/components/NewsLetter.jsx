@@ -3,10 +3,10 @@ import styled from 'styled-components'
 import { colors } from '../constants/colors'
 
 
-export default function NewsLetter() {
+export default function NewsLetter(props) {
   return (
     <Container>
-        <Image src='https://picsum.photos/270/300?grayscale'/>
+        <Image src={props.imageUrl}/>
         <Heading>Newsletter 22.0</Heading>
         <SubHeading>Nothing | Here</SubHeading>
     </Container>

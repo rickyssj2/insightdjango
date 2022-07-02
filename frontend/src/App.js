@@ -2,8 +2,8 @@
 import './App.css';
 import Header from './components/Header';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
-import NewsLetters from './Pages/NewsLetters';
 import ErrorPage from './Pages/ErrorPage';
+import Home from './Pages/Home';
 
 
 function App() {
@@ -12,7 +12,7 @@ function App() {
     <div className="App container">
       <Header/>
       <Routes>
-      <Route path="/" element={<NewsLetters/>} />
+      <Route path="/" element={<Home/>} />
       <Route path="*" element={<ErrorPage />}/>
       </Routes>
     </div>

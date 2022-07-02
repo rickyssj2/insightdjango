@@ -19,9 +19,9 @@ export default function Header() {
         </Icons>
     </Head>    
     <NavigationBar>
-      <div className="route">Home</div>
+      <Link to="/" activeClassName="active" className="route"><div >Home</div></Link>
       <div className="route">CURRENT EVENTS</div>
-      <Link to="/" activeClassName="active" className="route"><div >Newsletters</div></Link>
+      <div className="route">NewsLetters</div>
       <div className="route">IIT BBC</div>
       <div className="route">EDITORIALS</div>
       <div className="route">MICROSITES</div>
@@ -41,6 +41,7 @@ justify-content:space-between;
 align-items: center;
 img{
     width: 180px;
+    margin-left:20px;
 }
 a{
   color:inherit;

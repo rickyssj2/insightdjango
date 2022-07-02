@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import NewsLetter from "../components/NewsLetter";
-import { colors } from "../constants/colors";
 
 function NewsLetters() {
   return (
@@ -9,14 +8,14 @@ function NewsLetters() {
       <Container>
         <h1>NEWSLETTERS</h1>
         <NewsLetterBox>
-          <div className="faded">
-          <NewsLetter />
+          <div className="faded" >
+          <NewsLetter imageUrl="https://i.pinimg.com/originals/7f/3c/fa/7f3cfa1073a5484fc6899f4c47e008fb.jpg"/>
           </div>
           <div className="main">
-            <NewsLetter className="main" />
+            <NewsLetter className="main" imageUrl ="https://media.harrypotterfanzone.com/deathly-hallows-us-childrens-edition.jpg" />
           </div>
           <div className="faded">
-          <NewsLetter />
+          <NewsLetter imageUrl="https://media1.popsugar-assets.com/files/thumbor/FZupZweOb2bjTd0F7BMDLkEEEQQ/fit-in/2048xorig/filters:format_auto-!!-:strip_icc-!!-/2014/07/30/942/n/1922507/a5788b0355d72f00_10013441_666247360098949_1072939249_o/i/Harry-Potter-Philosopher-Stone.jpg" />
           </div>
         </NewsLetterBox>
       </Container>
@@ -26,12 +25,13 @@ function NewsLetters() {
 
 const Container = styled.div`
   width: 100%;
-  min-height: 560px;
+  min-height: 600px;
   background: url("Assets/images/background-left.png") left,
     url("Assets/images/background-right.png") right;
   background-repeat: no-repeat;
   background-size: contain;
   display: flex;
+  margin-bottom:20px;
   align-items: center;
   flex-direction: column;
   font-family: "Inknut Antiqua", sans-serif;
@@ -46,7 +46,7 @@ const NewsLetterBox = styled.div`
   display: flex;
   justify-content: center;
   gap: 200px;
-
+  margin-bottom:80px;
   .main {
     position: absolute;
     top: 50px;
