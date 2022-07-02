@@ -9,7 +9,7 @@ export default function Header() {
   return (
     <>
     <Head >
-        <img src="Assets/Images/insight-logo.png" alt="Image Not Found" />
+        <img src="Assets/Images/insight-logo.png" alt=" Not Found" />
         <Icons>
         <a href="https://www.facebook.com/insight.iitbombay"><i class="fa-brands fa-facebook-square"></i></a>
         <a href="https://www.instagram.com/insight.iitb/"><i class="fa-brands fa-instagram-square"></i></a>
@@ -19,9 +19,9 @@ export default function Header() {
         </Icons>
     </Head>    
     <NavigationBar>
-      <div className="route active">Home</div>
+      <div className="route">Home</div>
       <div className="route">CURRENT EVENTS</div>
-      <Link to="/"><div className="route">Newsletters</div></Link>
+      <Link to="/" activeClassName="active" className="route"><div >Newsletters</div></Link>
       <div className="route">IIT BBC</div>
       <div className="route">EDITORIALS</div>
       <div className="route">MICROSITES</div>
@@ -66,11 +66,16 @@ border-top:solid black 3px;
 border-bottom:solid black 3px;
 text-transform:uppercase;
 margin-top:20px;
+background-color:${colors.yellow};
 
 .route{
   padding:10px;
+  color:${colors.black};
+  text-decoration:none;
 }
+
 .active{
   color:${colors.primaryColor}
 }
+
 `
